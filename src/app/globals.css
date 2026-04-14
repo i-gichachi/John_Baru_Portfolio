@@ -1,26 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600;700&display=swap');
+
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  /* Tints of our Main Navy Strategy (Cool Neutrals) */
+  --color-navy-50: #F3F5F8;
+  --color-navy-100: #E2E7F0;
+  --color-navy-700: #142145;
+  --color-navy-800: #0A1128;
+  --color-navy-900: #060B19;
+
+  /* Tints of our Main Gold Strategy (Warm Neutrals) */
+  --color-gold-50: #FCFAF7;
+  --color-gold-100: #F6EFE5;
+  --color-gold-400: #D5BF9E;
+  --color-gold-500: #C8A97E;
+  --color-gold-600: #B39262;
+
+  --font-display: 'Playfair Display', serif;
+  --font-body: 'Inter', sans-serif;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --font-display: 'Playfair Display', serif;
+    --font-body: 'Inter', sans-serif;
   }
-}
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--color-navy-50);
+    color: var(--color-slate-800, #1E293B);
+    font-family: var(--font-body);
+    -webkit-font-smoothing: antialiased;
+  }
 }
