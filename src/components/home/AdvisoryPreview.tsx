@@ -74,7 +74,7 @@ export default function AdvisoryPreview() {
 
                                 <div className="border-t border-slate-200/70 pt-5">
                                     <Link
-                                        href="/advisory"
+                                        href={`/advisory#service-${index === 0 ? 1 : index === 1 ? 3 : 5}`}
                                         className="inline-flex items-center text-navy-800 font-body font-semibold text-[11px] md:text-[13px] hover:text-gold-500 transition-colors uppercase tracking-wider gap-2 w-full justify-between"
                                     >
                                         Explore Module

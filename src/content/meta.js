@@ -41,7 +41,7 @@ export const meta = {
     contact: {
         title: "Contact | John Baru | Book a Consultation",
         description:
-            "Book a consultation with John Baru — senior finance and operations advisory for NGOs, global health organisations and startups. Responds within 24 hours.",
+            "Book a consultation with John Baru | senior finance and operations advisory for NGOs, global health organisations and startups. Responds within 24 hours.",
         keywords: ["book CFO consultation", "finance advisory contact", "NGO finance help", "fractional CFO booking"],
         ogImage: "/images/og-contact.jpg",
     },

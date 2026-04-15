@@ -91,7 +91,7 @@ export default function FeaturedEngagements() {
                                     />
                                     
                                     <Link
-                                        href="/engagements"
+                                        href={`/engagements?case=${study.id}`}
                                         className="inline-flex items-center justify-center whitespace-nowrap border border-white/30 text-white font-body font-semibold text-[13px] md:text-sm px-6 py-3.5 rounded hover:bg-white hover:text-navy-900 transition-colors w-max"
                                     >
                                         Explore the Full Methodology Model

@@ -60,8 +60,8 @@ export default function LeadershipHero() {
                 &ldquo;
               </span>
               <p
-                className="font-display italic text-navy-800 text-lg md:text-xl leading-relaxed pl-6 border-l-2 border-gold-400"
-                dangerouslySetInnerHTML={{ __html: about.paragraphs[0] }}
+                className="text-navy-800/90 leading-relaxed text-lg pl-10"
+                dangerouslySetInnerHTML={{ __html: about.leadershipSnapshot }}
               />
             </div>
           </motion.div>
@@ -86,7 +86,7 @@ export default function LeadershipHero() {
                 ) : (
                   <Image
                     src="/images/john-baru.jpg"
-                    alt="John Baru — Global Finance &amp; Operations Executive"
+                    alt="John Baru | Global Finance &amp; Operations Executive"
                     fill
                     className="object-cover"
                     sizes="(max-width: 1024px) 100vw, 40vw"
