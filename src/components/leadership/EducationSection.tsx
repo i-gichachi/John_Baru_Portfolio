@@ -5,8 +5,8 @@ import { motion } from "framer-motion";
 import cv from "@/content/cv.json";
 
 const eduLogoMap: Record<string, string | null> = {
-  "Kenyatta University": "/images/logos/kenyatta_university_logo.jfif",
-  "Strathmore University": "/images/logos/strathmore_university_logo.jfif",
+  "Kenyatta University": "/images/logos/kenyatta_university_logo.jpg",
+  "Strathmore University": "/images/logos/strathmore_university_logo.jpg",
   "United States International University \u2013 Africa": "/images/logos/usiu_logo.png",
   "United States International University - Africa": "/images/logos/usiu_logo.png",
 };

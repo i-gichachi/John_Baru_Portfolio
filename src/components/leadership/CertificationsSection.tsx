@@ -7,8 +7,8 @@ import cv from "@/content/cv.json";
 const certLogoMap: Record<string, string | null> = {
   "ICPAK / Strathmore University": "/images/logos/icpak_logo.png",
   "ICPAK": "/images/logos/icpak_logo.png",
-  "Strathmore University": "/images/logos/strathmore_university_logo.jfif",
-  "PMD Pro": "/images/logos/PMD_pro_logo.jfif",
+  "Strathmore University": "/images/logos/strathmore_university_logo.jpg",
+  "PMD Pro": "/images/logos/PMD_pro_logo.jpg",
 };
 
 const certInitialsMap: Record<string, string> = {

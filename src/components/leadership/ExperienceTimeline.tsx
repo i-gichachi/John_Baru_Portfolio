@@ -18,15 +18,15 @@ type WorkExperience = {
 
 const logoMap: Record<string, string | null> = {
   "Elizabeth Glaser Pediatric AIDS Foundation":
-    "/images/logos/elizabeth_glaser_pediatric_aids_foundation_logo.jfif",
+    "/images/logos/elizabeth_glaser_pediatric_aids_foundation_logo.jpg",
   "Centres for Disease Control and Prevention":
-    "/images/logos/centers_for_disease_control_and_prevention_logo.jfif",
+    "/images/logos/centers_for_disease_control_and_prevention_logo.jpg",
   "Centers for Disease Control and Prevention":
-    "/images/logos/centers_for_disease_control_and_prevention_logo.jfif",
-  "Kenya Medical Research Institute": "/images/logos/Kemri_logo.jfif",
+    "/images/logos/centers_for_disease_control_and_prevention_logo.jpg",
+  "Kenya Medical Research Institute": "/images/logos/Kemri_logo.jpg",
   "USAID": "/images/logos/Usaid_logo.png",
-  "The Global Fund": "/images/logos/global_fund_logo.jfif",
-  "Unga Feeds Limited": "/images/logos/unga_group_ltd_logo.jfif",
+  "The Global Fund": "/images/logos/global_fund_logo.jpg",
+  "Unga Feeds Limited": "/images/logos/unga_group_ltd_logo.jpg",
 };
 
 function getInitials(name: string) {

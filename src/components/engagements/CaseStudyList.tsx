@@ -8,16 +8,16 @@ import { ChevronDown, ChevronRight } from "lucide-react";
 import { caseStudies } from "@/content/caseStudies";
 
 const logoMap: Record<string, string | null> = {
-  "Elizabeth Glaser Pediatric AIDS Foundation": "/images/logos/elizabeth_glaser_pediatric_aids_foundation_logo.jfif",
-  "EGPAF": "/images/logos/elizabeth_glaser_pediatric_aids_foundation_logo.jfif",
-  "Centres for Disease Control and Prevention": "/images/logos/centers_for_disease_control_and_prevention_logo.jfif",
-  "CDC": "/images/logos/centers_for_disease_control_and_prevention_logo.jfif",
-  "Kenya Medical Research Institute": "/images/logos/Kemri_logo.jfif",
-  "KEMRI": "/images/logos/Kemri_logo.jfif",
+  "Elizabeth Glaser Pediatric AIDS Foundation": "/images/logos/elizabeth_glaser_pediatric_aids_foundation_logo.jpg",
+  "EGPAF": "/images/logos/elizabeth_glaser_pediatric_aids_foundation_logo.jpg",
+  "Centres for Disease Control and Prevention": "/images/logos/centers_for_disease_control_and_prevention_logo.jpg",
+  "CDC": "/images/logos/centers_for_disease_control_and_prevention_logo.jpg",
+  "Kenya Medical Research Institute": "/images/logos/Kemri_logo.jpg",
+  "KEMRI": "/images/logos/Kemri_logo.jpg",
   "USAID": "/images/logos/Usaid_logo.png",
-  "The Global Fund": "/images/logos/global_fund_logo.jfif",
-  "Unga Feeds Limited": "/images/logos/unga_group_ltd_logo.jfif",
-  "Unga Group Ltd": "/images/logos/unga_group_ltd_logo.jfif",
+  "The Global Fund": "/images/logos/global_fund_logo.jpg",
+  "Unga Feeds Limited": "/images/logos/unga_group_ltd_logo.jpg",
+  "Unga Group Ltd": "/images/logos/unga_group_ltd_logo.jpg",
 };
 
 function getInitials(name: string) {
