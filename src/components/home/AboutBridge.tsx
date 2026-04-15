@@ -50,7 +50,7 @@ export default function AboutBridge() {
                                 Read My Full Story →
                             </Link>
                             <a 
-                                href="/cv/john-baru-cv.pdf"
+                                href="/cv/John-Baru-Executive-CV.pdf"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 download

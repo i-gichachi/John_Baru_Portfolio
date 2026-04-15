@@ -86,7 +86,7 @@ export default function Footer() {
                                 </span>
                             </div>
                             <a
-                                href="/cv/john-baru-cv.pdf"
+                                href="/cv/John-Baru-Executive-CV.pdf"
                                 download
                                 className="text-sm text-slate-400 hover:text-violet-400 transition-colors flex items-center gap-2 mt-3"
                             >

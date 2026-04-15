@@ -75,7 +75,7 @@ export default function LeadershipCTA() {
 
             <div className="flex flex-col sm:flex-row justify-center gap-3 md:gap-4">
               <a
-                href="/cv/john-baru-cv.pdf"
+                href="/cv/John-Baru-Executive-CV.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 download
