@@ -5,6 +5,7 @@ import LeadershipHero from "@/components/leadership/LeadershipHero";
 import ExperienceTimeline from "@/components/leadership/ExperienceTimeline";
 import EducationSection from "@/components/leadership/EducationSection";
 import CertificationsSection from "@/components/leadership/CertificationsSection";
+import PublicationsSection from '@/components/leadership/PublicationsSection';
 import LeadershipCTA from "@/components/leadership/LeadershipCTA";
 
 export const metadata: Metadata = {
@@ -45,6 +46,7 @@ export default function Leadership() {
       <ExperienceTimeline />
       <EducationSection />
       <CertificationsSection />
+      <PublicationsSection />
       <LeadershipCTA />
     </PageTransition>
   );
