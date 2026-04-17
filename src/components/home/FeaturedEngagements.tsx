@@ -59,9 +59,11 @@ export default function FeaturedEngagements() {
                                         </div>
                                         {matchedLogo?.imagePath ? (
                                             <div className="bg-white/5 rounded p-2 md:p-3 flex items-center justify-center w-max h-14 md:h-16">
-                                                <img 
+                                                <Image 
                                                     src={matchedLogo.imagePath} 
                                                     alt={matchedLogo.name} 
+                                                    width={120}
+                                                    height={64}
                                                     className="h-full w-auto object-contain mix-blend-screen"
                                                     style={{ filter: 'brightness(1.1)' }}
                                                 />

@@ -17,5 +17,5 @@ export const hero = {
         primary: { label: "View My Engagements", href: "/engagements" },
         secondary: { label: "Book a Consultation", href: "/contact" },
     },
-    photo: "/images/john-baru.jpg",
+    photo: "/images/John Baru Pics 2.jpeg",
 };

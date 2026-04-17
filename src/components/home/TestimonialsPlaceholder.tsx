@@ -2,60 +2,84 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
+import Image from "next/image";
+import { testimonials } from "@/content/testimonials";
 
 export default function TestimonialsPlaceholder() {
-    // Two empty placeholders
-    const placeholders = [1, 2];
+    // Show only first two as requested
+    const homeTestimonials = testimonials.slice(0, 2);
 
     return (
-        <section className="w-full bg-gold-50 py-16 lg:py-24 border-b border-gold-100">
-            <div className="max-w-7xl mx-auto px-5 lg:px-6">
+        <section className="w-full bg-gold-50 py-16 lg:py-20 border-b border-gold-100 relative overflow-hidden">
+            {/* Subtle background texture */}
+            <div className="absolute inset-0 opacity-[0.02] pointer-events-none" style={{ backgroundImage: 'radial-gradient(#B39262 1px, transparent 1px)', backgroundSize: '24px 24px' }}></div>
+            
+            <div className="max-w-6xl mx-auto px-5 lg:px-6 relative z-10">
                 
                 <motion.div 
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.6 }}
-                    className="mb-14 lg:mb-20 text-center"
+                    className="mb-12 lg:mb-16 text-center"
                 >
-                    <span className="inline-block text-gold-600 font-body text-[10px] md:text-xs font-semibold uppercase tracking-widest mb-4">
+                    <span className="inline-block text-gold-600 font-body text-[10px] md:text-xs font-bold uppercase tracking-[0.25em] mb-4">
                         Professional Endorsements
                     </span>
-                    <h2 className="font-display font-semibold text-3xl md:text-4xl lg:text-5xl text-navy-800 leading-tight">
+                    <h2 className="font-display font-bold text-3xl md:text-5xl text-navy-800 leading-tight">
                         Leadership Perspectives
                     </h2>
                 </motion.div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
-                    {placeholders.map((idx, index) => (
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
+                    {homeTestimonials.map((testimonial, index) => (
                         <motion.div 
-                            key={idx} 
-                            initial={{ opacity: 0, y: 30 }}
+                            key={testimonial.id} 
+                            initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
-                            transition={{ duration: 0.8, delay: index * 0.15 }}
-                            className="bg-white border border-navy-50 shadow-[0_8px_30px_rgba(0,0,0,0.02)] rounded-3xl p-8 lg:p-12 hover:-translate-y-2 hover:shadow-xl transition-all duration-500 relative flex flex-col justify-between"
+                            transition={{ duration: 0.8, delay: index * 0.1 }}
+                            className="group bg-white border border-navy-50 shadow-[0_4px_25px_rgba(0,0,0,0.02)] rounded-2xl p-6 lg:p-10 hover:shadow-xl transition-all duration-500 flex flex-col justify-between"
                         >
-                            {/* Stylized Quote Mark */}
-                            <div className="absolute top-8 lg:top-10 left-8 lg:left-10 text-9xl leading-none font-display text-navy-50 pointer-events-none tracking-tighter mix-blend-multiply opacity-60">
-                                "
-                            </div>
-                            
-                            <div className="relative z-10 pt-6">
-                                <div className="space-y-4 mb-10">
-                                    <div className="h-4 bg-navy-100/50 rounded-full w-full animate-pulse"></div>
-                                    <div className="h-4 bg-navy-100/50 rounded-full w-[90%] animate-pulse"></div>
-                                    <div className="h-4 bg-navy-100/50 rounded-full w-[95%] animate-pulse"></div>
-                                    <div className="h-4 bg-navy-100/50 rounded-full w-[60%] animate-pulse"></div>
+                            <div className="relative">
+                                <span className="text-gold-300/30 font-display text-5xl absolute -top-8 -left-5 select-none hover:scale-110 transition-transform">"</span>
+                                <div className="relative z-10 px-2 lg:px-4">
+                                    <p className="text-slate-700 italic leading-relaxed mb-6 text-[15px] md:text-lg font-body group-hover:text-navy-900 transition-colors duration-500">
+                                        {testimonial.quote}
+                                    </p>
+                                </div>
+                                <div className="flex justify-end -mt-4 pr-2">
+                                    <span className="text-gold-300/30 font-display text-5xl select-none leading-none hover:scale-110 transition-transform">"</span>
                                 </div>
                             </div>
 
-                            <div className="relative z-10 flex items-center gap-4 border-t border-navy-50 pt-6 mt-auto">
-                                <div className="w-12 h-12 bg-navy-100/50 rounded-full animate-pulse shrink-0"></div>
-                                <div className="flex flex-col gap-2 w-full">
-                                    <div className="h-3.5 bg-navy-100/70 rounded-full w-32 animate-pulse"></div>
-                                    <div className="h-2.5 bg-gold-100 rounded-full w-48 animate-pulse"></div>
+                            <div className="mt-auto relative z-10 flex items-center justify-between gap-5 pt-6 border-t border-navy-50/50">
+                                <div className="flex flex-col">
+                                    <h4 className="font-bold text-navy-800 text-base md:text-lg tracking-tight mb-0.5">
+                                        {testimonial.name}
+                                    </h4>
+                                    <div className="flex flex-wrap items-center gap-x-2 gap-y-0.5">
+                                        <p className="text-gold-600 text-[10px] md:text-xs font-bold uppercase tracking-wider">
+                                            {testimonial.title}
+                                        </p>
+                                        <span className="hidden md:block w-1 h-1 rounded-full bg-gold-200"></span>
+                                        <p className="text-slate-400 text-[10px] md:text-xs font-medium">
+                                            {testimonial.company}
+                                        </p>
+                                    </div>
                                 </div>
+
+                                {testimonial.logo && (
+                                    <div className="flex-shrink-0 bg-slate-50 rounded-md p-1 border border-slate-100 group-hover:bg-white transition-all duration-500">
+                                        <Image 
+                                            src={testimonial.logo}
+                                            alt={testimonial.company}
+                                            width={40}
+                                            height={40}
+                                            className="object-contain h-10 w-10 rounded-sm"
+                                        />
+                                    </div>
+                                )}
                             </div>
                         </motion.div>
                     ))}
@@ -65,14 +89,21 @@ export default function TestimonialsPlaceholder() {
                     initial={{ opacity: 0, scale: 0.95 }}
                     whileInView={{ opacity: 1, scale: 1 }}
                     viewport={{ once: true }}
-                    transition={{ duration: 0.6, delay: 0.4 }}
+                    transition={{ duration: 0.6, delay: 0.3 }}
                     className="mt-12 lg:mt-16 text-center flex justify-center"
                 >
                     <Link
-                        href="/testimonials"
-                        className="inline-flex items-center justify-center whitespace-nowrap border-2 border-navy-800 text-navy-800 font-body font-semibold text-[13px] md:text-sm px-6 lg:px-8 py-3.5 lg:py-4 rounded hover:bg-navy-800 hover:text-white hover:-translate-y-0.5 active:scale-95 transition-all duration-200"
+                        href="/advisory#testimonials"
+                        className="group inline-flex items-center justify-center whitespace-nowrap bg-navy-800 text-white font-body font-bold text-sm tracking-wide px-10 py-4 rounded-xl hover:bg-gold-600 hover:-translate-y-1 active:scale-95 transition-all duration-300 shadow-lg shadow-navy-100/20"
                     >
                         View All Testimonials
+                        <motion.span 
+                            className="ml-2"
+                            animate={{ x: [0, 4, 0] }}
+                            transition={{ repeat: Infinity, duration: 1.5 }}
+                        >
+                            →
+                        </motion.span>
                     </Link>
                 </motion.div>
 
@@ -80,3 +111,5 @@ export default function TestimonialsPlaceholder() {
         </section>
     );
 }
+
+

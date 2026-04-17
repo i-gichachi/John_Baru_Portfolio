@@ -93,7 +93,7 @@ export default function ServiceCards() {
 
                       {/* CTA link */}
                       <Link
-                        href={`/contact?service=${encodeURIComponent(service.cardTitle)}`}
+                        href={`/contact?service=${encodeURIComponent(service.cardTitle)}#calendly`}
                         className="inline-flex items-center gap-3 bg-navy-900 hover:bg-navy-800 text-white px-8 py-4 rounded-xl font-bold text-sm transition-all duration-300 shadow-lg shadow-navy-100 group active:scale-95"
                       >
                         {service.cta || "Book Private Advisory"}

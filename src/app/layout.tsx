@@ -9,11 +9,13 @@ import BackToTop from "@/components/layout/BackToTop";
 const playfair = Playfair_Display({
   subsets: ["latin"],
   variable: "--font-playfair",
+  display: 'swap',
 });
 
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
+  display: 'swap',
 });
 
 export const metadata: Metadata = {
@@ -27,8 +29,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <body className={`${playfair.variable} ${inter.variable} bg-[var(--color-background)] text-[var(--color-text)] antialiased`}>
+    <html lang="en" className={`${playfair.variable} ${inter.variable}`} suppressHydrationWarning>
+      <body className="bg-[var(--color-background)] text-[var(--color-text)] antialiased">
         <Navbar />
         <main className="pt-[64px] lg:pt-[72px] min-h-screen">
           {children}

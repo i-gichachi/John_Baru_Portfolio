@@ -27,7 +27,7 @@ export default function AdvisoryCTA() {
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Link
-            href="/contact"
+            href="/contact#calendly"
             className="bg-violet-600 hover:bg-violet-700 text-white px-8 py-4 rounded-xl font-semibold transition-colors shadow-lg shadow-violet-900/40"
           >
             Book a Consultation

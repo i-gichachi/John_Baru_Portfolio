@@ -35,12 +35,44 @@ export default function LeadershipHero() {
 
         {/* Main two-column layout */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
-          {/* Left: Text block */}
+          {/* Right: Image Block (Appears first on mobile using source order, second on desktop via lg:order-2) */}
+          <motion.div
+            initial={{ opacity: 0, x: 32 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.7, delay: 0.2, ease: "easeOut" }}
+            className="flex justify-center lg:justify-end lg:order-2"
+          >
+            <div className="relative">
+              {imgError ? (
+                <div className="w-[320px] h-[400px] md:w-[520px] md:h-[400px] flex flex-col items-center justify-center rounded-2xl bg-navy-800 shadow-2xl">
+                  <span className="font-display text-7xl text-white/10 tracking-tighter">JB</span>
+                  <span className="text-white/30 text-sm mt-4 font-body">John Baru</span>
+                </div>
+              ) : (
+                <Image
+                  src="/images/John Baru Pics 1.jpeg"
+                  alt="John Baru presenting at a global health conference"
+                  width={520}
+                  height={400}
+                  className="rounded-2xl object-cover shadow-2xl h-auto"
+                  priority={true}
+                  onError={() => setImgError(true)}
+                />
+              )}
+              <div className="absolute -bottom-4 -left-4 bg-violet-600 rounded-xl px-4 py-3 shadow-lg">
+                <p className="text-white text-xs font-semibold uppercase tracking-widest">
+                  Presenting at a Global Health Forum
+                </p>
+              </div>
+            </div>
+          </motion.div>
+
+          {/* Left: Text Block (Appears second on mobile using source order, first on desktop via lg:order-1) */}
           <motion.div
             initial={{ opacity: 0, x: -32 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.7, ease: "easeOut" }}
-            className="flex flex-col"
+            className="flex flex-col lg:order-1"
           >
             <h1 className="font-display font-bold text-4xl sm:text-5xl md:text-6xl text-navy-900 leading-[1.1] mb-6">
               My Leadership
@@ -63,59 +95,6 @@ export default function LeadershipHero() {
                 className="text-navy-800/90 leading-relaxed text-lg pl-10"
                 dangerouslySetInnerHTML={{ __html: about.leadershipSnapshot }}
               />
-            </div>
-          </motion.div>
-
-          {/* Right: Portrait */}
-          <motion.div
-            initial={{ opacity: 0, x: 32 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.7, delay: 0.2, ease: "easeOut" }}
-            className="flex justify-center lg:justify-end"
-          >
-            <div className="relative w-full max-w-sm lg:max-w-md">
-              {/* Decorative offset border */}
-              <div className="absolute inset-0 translate-x-4 translate-y-4 rounded-3xl border-2 border-gold-300/40 pointer-events-none"></div>
-
-              <div className="relative aspect-[3/4] w-full rounded-3xl overflow-hidden bg-navy-100 shadow-2xl">
-                {imgError ? (
-                  <div className="flex flex-col items-center justify-center h-full w-full bg-navy-800">
-                    <span className="font-display text-7xl text-white/10 tracking-tighter">JB</span>
-                    <span className="text-white/30 text-sm mt-4 font-body">John Baru</span>
-                  </div>
-                ) : (
-                  <Image
-                    src="/images/john-baru.jpg"
-                    alt="John Baru | Global Finance &amp; Operations Executive"
-                    fill
-                    className="object-cover"
-                    sizes="(max-width: 1024px) 100vw, 40vw"
-                    priority
-                    onError={() => setImgError(true)}
-                  />
-                )}
-              </div>
-
-              {/* Metric badge */}
-              <motion.div
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.5, delay: 0.6 }}
-                className="absolute -bottom-5 -left-5 bg-navy-900 text-white rounded-2xl px-5 py-4 shadow-xl"
-              >
-                <p className="font-display font-bold text-2xl text-gold-400">25+</p>
-                <p className="font-body text-[11px] text-white/60 uppercase tracking-wider mt-0.5">Years experience</p>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.5, delay: 0.75 }}
-                className="absolute -top-5 -right-5 bg-white rounded-2xl px-5 py-4 shadow-xl border border-navy-100"
-              >
-                <p className="font-display font-bold text-xl text-navy-900">$150M+</p>
-                <p className="font-body text-[11px] text-navy-400 uppercase tracking-wider mt-0.5">Portfolios led</p>
-              </motion.div>
             </div>
           </motion.div>
         </div>

@@ -199,7 +199,7 @@ export default function ContactSection() {
             viewport={{ once: true }}
             className="lg:col-span-5"
           >
-            <div className="bg-white/[0.06] border border-white/10 rounded-3xl p-6 md:p-10 backdrop-blur-xl relative overflow-hidden group shadow-[0_20px_50px_rgba(0,0,0,0.5)]">
+            <div id="calendly" className="bg-white/[0.06] border border-white/10 rounded-3xl p-6 md:p-10 backdrop-blur-xl relative overflow-hidden group shadow-[0_20px_50px_rgba(0,0,0,0.5)] scroll-mt-24">
               <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent pointer-events-none" />
               {/* Subtle top glow */}
               <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-violet-500/30 to-transparent" />
@@ -240,9 +240,7 @@ export default function ContactSection() {
                 For detailed project inquiries or specific advisory requests, use the direct message interface below.
               </p>
 
-              <Suspense fallback={<div className="h-[400px] flex items-center justify-center text-white/20">Loading interface...</div>}>
-                <ContactForm />
-              </Suspense>
+              <ContactForm />
             </div>
 
             {/* DETAILS & SOCIALS */}

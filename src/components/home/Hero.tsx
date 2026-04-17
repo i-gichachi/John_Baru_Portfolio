@@ -109,7 +109,7 @@ export default function Hero() {
                                 {hero.cta.primary.label}
                             </Link>
                             <Link 
-                                href={hero.cta.secondary.href}
+                                href="/contact#calendly"
                                 className="inline-flex items-center justify-center whitespace-nowrap bg-transparent border border-white/60 text-white font-body font-semibold text-[13px] sm:text-sm px-6 lg:px-8 py-3.5 lg:py-4 rounded hover:bg-white hover:text-navy-900 hover:-translate-y-0.5 active:scale-95 transition-all duration-200 text-center w-full sm:w-auto"
                             >
                                 {hero.cta.secondary.label}
