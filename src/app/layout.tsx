@@ -21,6 +21,11 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "John Wachania Baru - Portfolio",
   description: "Portfolio of John Wachania Baru, Senior Finance and Operations Executive.",
+  icons: {
+    icon: '/icon.png',
+    apple: '/apple-icon.png',
+  },
+  manifest: '/manifest.webmanifest',
 };
 
 export default function RootLayout({
