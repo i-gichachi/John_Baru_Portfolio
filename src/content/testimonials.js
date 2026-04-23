@@ -26,4 +26,22 @@ export const testimonials = [
     logo: "/images/logos/elizabeth_glaser_pediatric_aids_foundation_logo.jpg",
     quote: "I had the privilege of working under John Baru during my time at EGPAF, where he served as my immediate supervisor. John is an outstanding leader with deep expertise in grants management, complemented by strong capabilities in finance and procurement oversight, as well as a forward-looking approach to digital transformation. He played a pivotal role in strengthening grants management practices, ensuring full compliance with donor requirements while improving efficiency in planning, budgeting, and reporting. John was also instrumental in driving digital transformation within the grants, finance, and procurement functions, championing the adoption of digital tools and data-driven approaches that streamlined workflows, enhanced accountability, and improved real-time visibility of project and financial performance. He brings a rare combination of strategic insight, technical depth, and strong leadership, making him a valuable resource to any organisation focused on delivering impactful, compliant, and efficient programme delivery.",
   },
+  {
+    id: 4,
+    name: "Teresia Kangwele",
+    title: "Project Management Specialist, Strategic Planning and Analysis Office, Project Design Team",
+    company: "USAID Kenya and East Africa",
+    photo: "/images/testimonials/teresia-kangwele.jpg",
+    logo: "/images/logos/Usaid_logo.png",
+    quote: "John Baru is a highly skilled cooperative agreement and grants management specialist with more than ten years of expertise managing intricate, high-value public health financing portfolios. In his capacity as Cooperative Agreement Specialist/Grant Manager at CDC/KEMRI (2009–2019), he oversaw a USD 36 million annual PEPFAR portfolio for over 40 implementing partners, ensuring that operational delivery and federal compliance requirements were closely aligned. He received recognition for his outstanding performance in overseeing the 2013 continuation award process for CDC implementing partners, as well as his development of cooperative agreement management procedures in response to business accountability assessments. Through precise expectations, methodical evaluations, and workable remedial measures, he continuously cultivated trust with partners and guaranteed the continuation of vital health services. John's people leadership is equally outstanding — through focused capacity-building and streamlined review procedures, he increased partner compliance and audit preparedness by 30% whilst encouraging cooperation between internal teams and implementing partners. His approach to leadership places a strong emphasis on responsibility, openness, and problem-solving, facilitating better financial governance, lower risk, and more effective administration of cooperative agreements at all implementation levels.",
+  },
+  {
+    id: 5,
+    name: "Nahshon Kabene",
+    title: "Senior Financial Controller",
+    company: "African Society for Laboratory Medicine",
+    photo: "/images/testimonials/nahshon-kabene.jpg",
+    logo: "/images/logos/African Society for Laboratory Medicine_logo.png",
+    quote: "An exemplary operations professional. I had the pleasure of working with John Baru during his tenure as Operations Director, where he consistently demonstrated exceptional leadership and strategic foresight. His expertise in automating processes significantly enhanced efficiency across teams, whilst his dedication to mentorship fostered professional growth and collaboration. Beyond operational excellence, John brought strong capabilities in grants management and financial strategy, ensuring compliance and driving sustainable adoption of new practices. His ability to balance technical innovation with people-centred leadership made him an invaluable asset to the organisation. I confidently recommend John as a visionary leader whose skills in process optimisation, financial stewardship, and team development will add substantial value to any institution.",
+  },
 ]
